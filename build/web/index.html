@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ecommerce - Home Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* ===== Global Page Style ===== */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* ===== Navigation Bar ===== */
+        nav {
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            border-radius: 0 0 15px 15px;
+        }
+
+        nav .nav-left h2 {
+            color: #6c63ff;
+            font-size: 26px;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav .nav-right a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            margin: 0 20px;
+            font-size: 17px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav .nav-right a:hover {
+            color: #6c63ff;
+            transform: translateY(-2px);
+        }
+
+        /* ===== Hero Section ===== */
+        .hero {
+            margin-top: 120px;
+            text-align: center;
+            color: #222;
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            font-weight: 700;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #555;
+            margin: 20px auto;
+            width: 70%;
+            line-height: 1.7;
+        }
+
+        .hero .btn {
+            background-color: #6c63ff;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .hero .btn:hover {
+            background-color: #5548d0;
+            transform: scale(1.05);
+        }
+
+        /* ===== Feature Section ===== */
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 60px auto;
+            flex-wrap: wrap;
+        }
+
+        .feature-box {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px 35px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            width: 280px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+        }
+
+        .feature-box h3 {
+            color: #6c63ff;
+            margin-bottom: 10px;
+        }
+
+        .feature-box p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* ===== Background Image ===== */
+        .hero-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 60px;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 0;
+            color: #ccc;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+            .hero p {
+                width: 90%;
+            }
+            .feature-box {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== Navigation Bar ===== -->
+    <nav>
+        <div class="nav-left">
+            <h2>Ecommerce</h2>
+        </div>
+        <div class="nav-right">
+            <a href="index.html">Home</a>
+            <a href="adminlogin.jsp">Admin</a>
+            <a href="userlogin.jsp">User</a>
+            
+        </div>
+    </nav>
+
+    <!-- ===== Hero Section ===== -->
+    <section class="hero">
+        <h1>Welcome to Our Ecommerce Store</h1>
+        <p>
+            Discover a world of premium products at your fingertips.  
+            From fashion to electronics, we bring you the best quality and unbeatable prices.
+            Shop safely and conveniently — anytime, anywhere.
+        </p>
+        <button class="btn" onclick="window.location.href='userlogin.jsp'">Shop Now</button>
+        <img src="images/Ecommerce image.webp" alt="Ecommerce" class="hero-img">
+    </section>
+
+    <!-- ===== Feature Section ===== -->
+    <section class="features">
+        <div class="feature-box">
+            <h3>🛒 Wide Range</h3>
+            <p>Choose from thousands of trusted products across multiple categories.</p>
+        </div>
+        <!---<div class="feature-box">
+            <h3>🚚 Delivery</h3>
+            <p>Get your orders delivered quickly with real-time tracking and updates.</p>
+        </div>
+        <div class="feature-box">
+            <h3>💳 Secure Payments</h3>
+            <p>Pay confidently with our 100% secure and encrypted payment gateway.</p>
+        </div>
+    </section>--->
+
+    <!-- ===== Footer ===== -->
+    <footer>
+        <p>© 2025 Ecommerce Store | Designed by Sahana</p>
+    </footer>
+</body>
+</html>
